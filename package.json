@@ -1,0 +1,35 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "вычислитель отличий для проекта",
+  "keywords": [
+    "gendiff"
+  ],
+  "homepage": "https://github.com/FoxxMGR/fullstack-javascript-project-46#readme",
+  "bugs": {
+    "url": "https://github.com/FoxxMGR/fullstack-javascript-project-46/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoxxMGR/fullstack-javascript-project-46.git"
+  },
+  "license": "ISC",
+  "author": "FoxxMGR",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
+  "dependencies": {
+    "commander": "^14.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@stylistic/eslint-plugin": "^5.3.1",
+    "eslint": "^9.35.0",
+    "globals": "^16.4.0"
+  }
+}

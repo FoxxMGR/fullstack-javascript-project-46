@@ -15,7 +15,7 @@
   },
   "license": "ISC",
   "author": "FoxxMGR",
-  "type": "module",
+  "type": "CommonJS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

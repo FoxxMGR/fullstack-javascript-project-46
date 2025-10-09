@@ -12,6 +12,7 @@ program
   .option('-f, --format [type]', 'output format')
   .action((filepath1, filepath2) => {
    
+    
   })
 
 program.parse()

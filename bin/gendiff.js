@@ -11,8 +11,7 @@ program
   .option('-V, --version', 'output the version number')
   .option('-f, --format [type]', 'output format')
   .action((filepath1, filepath2) => {
-    console.log(parser(filepath1, filepath2))
-    console.log('node')
+   
   })
 
 program.parse()

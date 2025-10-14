@@ -39,4 +39,3 @@ export default function parser(filepath1, filepath2) {
   const data2 = readFile(filepath2)
   return buildDiff(data1, data2)
 }
-

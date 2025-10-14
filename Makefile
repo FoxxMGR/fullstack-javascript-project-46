@@ -1,8 +1,8 @@
-install: 
+install:
 	npm ci
 publish:
 	npm publish --dry-run
 lint:
 	npx eslint .
 test-coverage:
-    echo 'test'
+	echo 'test'

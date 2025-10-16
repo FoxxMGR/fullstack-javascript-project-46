@@ -4,7 +4,11 @@ publish:
 	npm publish --dry-run
 lint:
 	npx eslint .
+lint-fix:
+	npx eslint . --fix
 test:
 	npm test
 test-coverage:
-	echo 'test'
+	npm test -- --coverage
+test-watch:
+	npm test -- --watch

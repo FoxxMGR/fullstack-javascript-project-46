@@ -1,9 +1,7 @@
-// @ts-check
-
 import { expect, test } from '@jest/globals'
 import { readFileSync } from 'fs'
 import path from 'path'
-import parser from '../src/parser.js'
+import parser from '../src/parsers.js'
 import process from 'process'
 
 const getAbsolutePath = (filepath) => {
@@ -15,9 +13,16 @@ const readFile = (filepath) => {
   return data
 }
 
-test('parser', () => {
+test('parserJson', () => {
   const filepath1 = getAbsolutePath('file1.json')
   const filepath2 = getAbsolutePath('file2.json')
+  const result = getAbsolutePath('result.txt')
+  expect(parser(filepath1, filepath2)).toBe(readFile(result))
+})
+
+test('parserYaml', () => {
+  const filepath1 = getAbsolutePath('file1.yml')
+  const filepath2 = getAbsolutePath('file2.yml')
   const result = getAbsolutePath('result.txt')
   expect(parser(filepath1, filepath2)).toBe(readFile(result))
 })

@@ -9,10 +9,9 @@ program
   .argument('<filepath1>')
   .argument('<filepath2>')
   .option('-V, --version', 'output the version number')
-  .option('-f, --format [type]', 'output format')
-  .action((filepath1, filepath2) => {
-    console.log(parser(filepath1, filepath2))
-    console.log('node')
+  .option('-f, --format [type]', 'output format', 'stylish')
+  .action((filepath1, filepath2, format) => {
+    console.log(parser(filepath1, filepath2, format))
   })
 
 program.parse()

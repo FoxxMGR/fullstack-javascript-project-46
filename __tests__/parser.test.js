@@ -14,15 +14,15 @@ const readFile = (filepath) => {
 }
 
 test('parserJson', () => {
-  const filepath1 = getAbsolutePath('file1.json')
-  const filepath2 = getAbsolutePath('file2.json')
-  const result = getAbsolutePath('result.txt')
+  const filepath1 = getAbsolutePath('fileTree1.json')
+  const filepath2 = getAbsolutePath('fileTree2.json')
+  const result = getAbsolutePath('resultTree.txt')
   expect(parser(filepath1, filepath2)).toBe(readFile(result))
 })
 
 test('parserYaml', () => {
-  const filepath1 = getAbsolutePath('file1.yml')
-  const filepath2 = getAbsolutePath('file2.yml')
-  const result = getAbsolutePath('result.txt')
+  const filepath1 = getAbsolutePath('fileTree1.yml')
+  const filepath2 = getAbsolutePath('fileTree2.yml')
+  const result = getAbsolutePath('resultTree.txt')
   expect(parser(filepath1, filepath2)).toBe(readFile(result))
 })

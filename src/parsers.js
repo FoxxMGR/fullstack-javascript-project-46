@@ -3,7 +3,7 @@ import path from 'path'
 import { readFileSync } from 'fs'
 import _ from 'lodash'
 import yaml from 'js-yaml'
-import formatStylish from './formaters/stylish.js'
+import format from './formaters/formats.js'
 
 const readFile = (filepath) => {
   const absolutePath = path.resolve(process.cwd(), filepath)
@@ -100,10 +100,10 @@ const buildTree = (data1, data2) => {
 //   return `{\n${diffLines.join('\n')}\n}`
 // }
 
-export default function parser(filepath1, filepath2) {
+export default function parser(filepath1, filepath2, formatName = 'stylish') {
   const data1 = readFile(filepath1)
   const data2 = readFile(filepath2)
   const tree = buildTree(data1, data2)
 
-  return formatStylish(tree)
+  return format(tree, formatName)
 }

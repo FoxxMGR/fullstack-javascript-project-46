@@ -8,13 +8,13 @@ const getAbsolutePath = (filepath) => {
   return path.resolve(process.cwd(), '__fixtures__', filepath)
 }
 
-// const readFile = (filepath) => {
-//   const data = readFileSync(getAbsolutePath(filepath), 'utf8')
-//   return data
-// }
+const readFile = (filepath) => {
+  const data = readFileSync(getAbsolutePath(filepath), 'utf8')
+  return data
+}
 
-const getFixture = filepath =>
-  readFileSync(getAbsolutePath(filepath), 'utf8')
+// const getFixture = filepath =>
+//   readFileSync(getAbsolutePath(filepath), 'utf8')
 
 // test('parserJson', () => {
 //   const filepath1 = getAbsolutePath('fileTree1.json')
@@ -41,7 +41,7 @@ formats.forEach((format) => {
         getAbsolutePath(`fileTree2.${ext}`),
         format,
       )
-      expect(result).toBe(getFixture(`result${format}.txt`))
+      expect(result).toBe(readFile(`result${format}.txt`))
     })
   })
 })

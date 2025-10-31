@@ -13,24 +13,7 @@ const readFile = (filepath) => {
   return data
 }
 
-// const getFixture = filepath =>
-//   readFileSync(getAbsolutePath(filepath), 'utf8')
-
-// test('parserJson', () => {
-//   const filepath1 = getAbsolutePath('fileTree1.json')
-//   const filepath2 = getAbsolutePath('fileTree2.json')
-//   const result = getAbsolutePath('resultTree.txt')
-//   expect(parser(filepath1, filepath2)).toBe(readFile(result))
-// })
-
-// test('parserYaml', () => {
-//   const filepath1 = getAbsolutePath('fileTree1.yml')
-//   const filepath2 = getAbsolutePath('fileTree2.yml')
-//   const result = getAbsolutePath('resultTree.txt')
-//   expect(parser(filepath1, filepath2)).toBe(readFile(result))
-// })
-
-const formats = ['stylish', 'plain']
+const formats = ['stylish', 'plain', 'json']
 const extensions = ['json', 'yml']
 
 formats.forEach((format) => {

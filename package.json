@@ -16,7 +16,7 @@
   "license": "ISC",
   "author": "FoxxMGR",
   "type": "module",
-  "main": "gendiff.js",
+  "main": "bin/gendiff.js",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },

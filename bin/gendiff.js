@@ -14,4 +14,6 @@ program
 
 program.parse()
 
-export default parser
+export default function gendiff(filepath1, filepath2, format = 'stylish') {
+  return parser(filepath1, filepath2, format)
+}

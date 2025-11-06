@@ -13,3 +13,5 @@ program
   .action((filepath1, filepath2, { format }) => console.log(parser(filepath1, filepath2, format)))
 
 program.parse()
+
+export default parser

@@ -18,8 +18,7 @@ const readFile = (filepath) => {
     case '.yml':
       return yaml.load(data)
     default:
-      console.warn(`Неизвестное расширение файла: ${extension}. Возвращаем сырые данные.`)
-      return data
+      throw new Error(`Unknown format: ${extension}`)
   }
 }
 
